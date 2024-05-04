@@ -1,16 +1,18 @@
 package com.example.testservice_02.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Entity
+@Builder
 @AllArgsConstructor
 public class Employee {
 
+    @Id
+    @GeneratedValue
     private Integer id;
     private String name;
 

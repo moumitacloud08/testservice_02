@@ -16,12 +16,12 @@ public class CityController {
     private CityDao cityDao;
 
     @GetMapping("/cities")
-    public Cities  getCities(){
+    public Cities getCities() {
         return new Cities(cityDao.findAll());
     }
 
     @PutMapping("/cities")
-    public void putCity(@RequestBody City city){
-
+    public void putCity(@RequestBody City city) {
+        cityDao.save(city);
     }
 }
